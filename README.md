@@ -47,4 +47,5 @@ The click events are shown in the console tab when we do inspect element on the 
 
 ## Assumptions
 The text analyser question states that we need to input more than 10000 words in the text box. It will NOT give an error if the input is less than 10000 words. It will, however, print a warning to show that the number of words are less than 10000.
-These events are shown in the console tab when we do inspect element on the webpage. 
+
+The click events are shown in the console tab when we do inspect element on the webpage. 
