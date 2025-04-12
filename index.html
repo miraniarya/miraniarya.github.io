@@ -18,7 +18,7 @@
         <div class="container">
             <header>
                 <h1>Personal Website</h1>
-<!--                 <h4>This website is hosted at: <a href="https://miraniarya.github.io/index.html" target="_blank">Github.io Page</a></h4> -->
+                <!-- <h4>This website is hosted at: <a href="https://miraniarya.github.io/index.html" target="_blank">Github.io Page</a></h4> -->
             </header>
             
             <section id="about">
@@ -35,6 +35,7 @@
             <section id="education">
                 <h2>Education Background</h2>
                 <p>I am currently studying at IIITH from 2024 to 2028 and I studied at Indian School Sohar from 2015-2021 and Indian School Al Wadi Al Kabir from 2021-2023 and graduated in 2024.</p>
+                <p>Have certifications for coding languages such as Python and MySQL from platforms like Coursera and Udemy.</p>
             </section>
             
             <section id="Achievements">
@@ -43,6 +44,7 @@
                     <li>Nationals '2018 Table Tennis Player</li>
                     <li>Secured 2nd place in National Hackathon called MECKATHON '22 - Won ₹170000</li>
                     <li>Secured 2nd place in National Hackathon called ACQUITY '23 - Won ₹32000</li>
+                    <li>SAT Score of 1550</li>
                 </ul>
             </section>
             
@@ -62,12 +64,32 @@
             </section>
 
             <section id="gallery">
-                <h3>Pictures from My Childhood</h3><br>
-                <img src="assets/images/palm.jpg" alt="Growing Up" style="width: 350px; height: 250px; margin-right: 10px;" /> 
-                &nbsp;                
-                &nbsp;
-                <img src="assets/images/image2.png" alt="Local Picture 2" style="width: 350px; height: 250px; margin-right: 10px;" />
-                <img src="assets/images/baroda.jpg" alt="Local Picture 2" style="width: 350px; height: 250px; margin-right: 10px;" />
+                <h2>Pictures</h2><br>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li>
+                        <h3 style="cursor: pointer; margin-left: 20px;" onclick="toggleGallery('birthplaceGallery')">Birthplace</h3>
+                        <div id="birthplaceGallery" style="display: none; margin-left: 40px;">
+                            <img src="assets/images/baroda.jpg" alt="Birthplace Picture" style="width: 350px; height: 250px; margin-right: 10px;" />
+                            <img src="assets/images/baroda2.jpg" alt="Birthplace Picture" style="width: 350px; height: 250px; margin-right: 10px;" />
+                        </div>
+                    </li>
+                    <li>
+                        <h3 style="cursor: pointer; margin-left: 20px;" onclick="toggleGallery('childhoodGallery')">Childhood</h3>
+                        <div id="childhoodGallery" style="display: none;">
+                            <img src="assets/images/palm.jpg" alt="Childhood Picture 1" style="width: 350px; height: 250px; margin-right: 10px;" />
+                            <img src="assets/images/image2.png" alt="Childhood Picture 2" style="width: 350px; height: 250px; margin-right: 10px;" />
+                        </div>
+                    </li>
+                </ul>
+
+                <script>
+                    function toggleGallery(galleryId) {
+                        const gallery = document.getElementById(galleryId);
+                        gallery.style.display = gallery.style.display === 'none' ? 'block' : 'none';
+                    }
+                </script>
+                    
+                </div>
                 <!-- <div id="map" style="width: 100%; height: 400px;"></div> -->
                 <!-- <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiaHLNm-44I8NuvJzSUDQktvACDF5qfpE&callback=initMap"></script>
@@ -92,6 +114,8 @@
             <h3>Results:</h3>
             <p><strong>Letters:</strong> <span id="letterCount"></span></p>
             <p><strong>Words:</strong> <span id="wordCount"></span></p>
+            <p id="wordCountWarning" style="color: red; display: none;">The word count is less than 10,000!</p> 
+            <!-- throws a warning if the words are less than 10000 -->
             <p><strong>Spaces:</strong> <span id="spaceCount"></span></p>
             <p><strong>Newlines:</strong> <span id="newlineCount"></span></p>
             <p><strong>Special Symbols:</strong> <span id="specialCount"></span></p>
