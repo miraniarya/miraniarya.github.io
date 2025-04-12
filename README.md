@@ -1,7 +1,5 @@
 ## About This Website
 
-**This website is hosted here: [https://miraniarya.github.io/index.html](Link)**
-
 This website is a personal portfolio hosted on GitHub Pages. It includes the following sections:
 
 - **About Me**: A brief paragraph introducing myself.
