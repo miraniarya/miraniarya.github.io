@@ -15,7 +15,7 @@ This website is a personal portfolio hosted on GitHub Pages. It includes the fol
 ## Folder Structure
 
 ```
-Q3/
+personal-websites/
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
@@ -34,6 +34,15 @@ Q3/
 ## Execution Instructions
 
 Either run the index.html after downloading it or directly click on the link given in website.txt
+
+
+## Assumptions
+
+The text analyser question states that we need to input more than 10000 words in the text box. It will NOT give an error if the input is less than 10000 words. It will, however, print a warning to show that the number of words are less than 10000.
+The click events are shown in the console tab when we do inspect element on the webpage. 
+
+
+
 
 ## Assumptions
 
