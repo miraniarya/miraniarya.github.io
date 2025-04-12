@@ -44,7 +44,12 @@ function showSection(sectionId) {
 function analyzeText() {
     let text = document.getElementById("inputText").value;
     let letterCount = (text.match(/[a-zA-Z]/g) || []).length;
-    let wordCount = (text.match(/\b\w+\b/g) || []).length;
+    let wordCount = (text.match(/\b\w+\b/g) || []).length; 
+    if (wordCount < 10000) {
+        document.getElementById("wordCountWarning").style.display = "block";
+    } else {
+        document.getElementById("wordCountWarning").style.display = "none";
+    }
     let spaceCount = (text.match(/ /g) || []).length;
     let newlineCount = (text.match(/\n/g) || []).length;
     let specialCount = (text.match(/[^a-zA-Z0-9\s]/g) || []).length;
@@ -81,6 +86,7 @@ function analyzeText() {
             if (count > 0) counts[word] = count;
         });
         return counts;
+        
     }
 
     document.getElementById("pronounsCount").innerText = JSON.stringify(countOccurrences(pronouns), null, 2);
