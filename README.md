@@ -28,7 +28,8 @@ personal-websites/
 │   └── Resume.pdf  
 ├── README.md
 ├── javasss.js
-└── index.html
+├── index.html
+└── website.txt
 ```
 
 ## Execution Instructions
